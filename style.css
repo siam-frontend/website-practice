@@ -1,0 +1,133 @@
+.hero-img{
+position:relative;
+}
+
+
+.glow{
+width:300px;
+height:300px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(45deg,#00f5d4,#00ffff,#00f5d4);
+animation:rotate 4s linear infinite, pulse 2s ease-in-out infinite;
+padding:6px;
+}
+
+/* 🔥 Pulse Shadow Animation */
+@keyframes pulse{
+0%{
+box-shadow:0 0 20px #00f5d4,
+           0 0 40px #00f5d4,
+           0 0 60px #00f5d4;
+}
+50%{
+box-shadow:0 0 40px #00ffff,
+           0 0 80px #00ffff,
+           0 0 120px #00ffff;
+}
+100%{
+box-shadow:0 0 20px #00f5d4,
+           0 0 40px #00f5d4,
+           0 0 60px #00f5d4;
+}
+}
+
+.glow img{
+width:100%;
+height:100%;
+border-radius:50%;
+object-fit:cover;
+background:#0f172a;
+}
+
+@keyframes rotate{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+.social-links{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:25px;
+}
+
+.social-links a{
+width:55px;
+height:55px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+font-size:22px;
+color:white;
+transition:0.4s;
+text-decoration:none;
+}
+
+.whatsapp{background:#25D366;}
+.github{background:#333;}
+.facebook{background:#1877F2;}
+.linkedin{background:#0077B5;}
+
+.social-links a:hover{
+transform:translateY(-8px) scale(1.1);
+box-shadow:0 0 20px rgba(255,255,255,0.6);
+}
+
+.footer{
+background:#0f172a;
+padding:80px 10%;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.footer h2{
+margin-bottom:40px;
+font-size:28px;
+}
+
+.social-links{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-bottom:40px;
+}
+
+.social-links a{
+width:70px;
+height:70px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+font-size:28px;
+color:white;
+text-decoration:none;
+position:relative;
+transition:0.4s;
+border:2px solid rgba(255,255,255,0.2);
+}
+
+/* Neon Glow Hover */
+.social-links a:hover{
+transform:translateY(-10px) scale(1.1);
+box-shadow:
+0 0 15px currentColor,
+0 0 30px currentColor,
+0 0 60px currentColor;
+}
+
+/* Individual Brand Colors */
+.whatsapp{color:#25D366;}
+.github{color:#ffffff;}
+.facebook{color:#1877F2;}
+.linkedin{color:#0A66C2;}
+
+.copyright{
+opacity:0.7;
+font-size:14px;
+}

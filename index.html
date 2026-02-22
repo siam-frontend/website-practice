@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SIAM DEV</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+<style>
+      *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+       html{scroll-behavior:smooth;}
+       body{background:#0f172a;color:white;}
+
+nav{
+     position:fixed;
+     width:100%;
+     background:#0f172a;
+     padding:15px 10%;
+     display:flex;
+     justify-content:space-between;
+     align-items:center;
+     z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.5);
+ }
+
+nav a{
+ color:white;
+ text-decoration:none;
+ margin-left:20px;
+ font-weight:500;
+ }
+
+ nav a:hover{color:#00f5d4;}
+ 
+ section{padding:100px 10%;}
+
+ .hero{
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ min-height:100vh;
+ } 
+
+ .hero-text h1{font-size:45px;}
+ .hero-text span{color:#00f5d4;}
+ .hero-text p{margin:20px 0;color:#cbd5e1;max-width:500px;}
+
+ .btn{
+ padding:12px 25px;
+ background:#00f5d4;
+ color:black;
+ border-radius:30px;
+ text-decoration:none;
+ font-weight:bold;
+ transition:0.3s;
+ display:inline-block;
+ } 
+ .btn:hover{background:white;}
+
+ .hero-img img{
+ width:280px;height:280px;border-radius:50%;
+ object-fit:cover;border:5px solid #00f5d4;
+ animation:float 3s ease-in-out infinite;
+ } 
+
+ @keyframes float{
+ 0%,100%{transform:translateY(0);}
+ 50%{transform:translateY(-15px);}
+ }
+
+ .skills{background:white;color:black;text-align:center;}
+ .skills h2{margin-bottom:40px;}
+
+ .skill{
+ margin-bottom:20px;
+ }
+
+ .skill p{margin-bottom:5px;}
+
+ .bar{
+ background:#ddd;
+ border-radius:20px;
+ overflow:hidden;
+ }
+
+ .progress{
+ height:10px;
+ background:#00f5d4;
+ width:0;
+ transition:2s;
+ } 
+
+ .contact{
+ background:#1e293b;
+ text-align:center;
+ }
+
+input, textarea{
+ width:100%;
+ max-width:500px;
+ padding:10px;
+ margin:10px auto;
+ display:block;
+ border-radius:5px;
+ border:none;
+}
+
+@media(max-width:900px){
+ .hero{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+ <body>
+
+</div>
+
+<nav>
+<h2>SIAM</h2>
+   <div>
+       <a href="#home">Home</a>
+       <a href="#skills">Skills</a>
+       <a href="#contact">Contact</a>
+ </div>
+</nav>
+
+<section class="hero" id="home">
+      <div class="hero-text">
+      <h1>I am <span id="typing"></span></h1>
+      <p>I build modern, responsive and animated websites for clients worldwide.</p>
+      <a href="mailto:sinhaalsiyam83@gmail.com?subject=Hiring Inquiry&body=Hello Siam, I want to hire you for a project." class="btn">
+      Hire Me
+</a>
+</div>
+
+<div class="hero-img">
+     <div class="glow">
+     <img src="siam.png" alt="Siam Dev">
+  </div>
+</div> 
+</div>
+</section>
+
+<section class="skills" id="skills">
+<h2>My Skills</h2>
+
+<div class="skill">
+<p>HTML</p>
+<div class="bar"><div class="progress" style="width:95%"></div></div>
+</div>
+
+<div class="skill">
+<p>CSS</p>
+<div class="bar"><div class="progress" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<p>JavaScript</p>
+<div class="bar"><div class="progress" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<p>PHP</p>
+<div class="bar"><div class="progress" style="width:80%"></div></div>
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+<h2>Contact Me</h2>
+
+ <footer class="footer">
+
+<div class="footer-content">
+
+  <div class="social-links">
+
+    <a href="https://wa.me/8801602153114" target="_blank" class="whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="https://github.com/siam-frontend" target="_blank" class="github">
+      <i class="fab fa-github"></i>
+    </a>
+
+    <a href="https://facebook.com/sinhaalsiyam" target="_blank" class="facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://linkedin.com/in/sinhaaalsiam" target="_blank" class="linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+  </div>
+
+  <p class="copyright">
+    © 2026 SIAM DEV | All Rights Reserved
+  </p>
+</div>
+
+</section>
+
+<script>
+const texts = ["Full-Stack Developer", "Frontend Expert", "Freelancer"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+if(count === texts.length){count = 0;}
+currentText = texts[count];
+letter = currentText.slice(0, ++index);
+document.getElementById("typing").textContent = letter;
+if(letter.length === currentText.length){
+setTimeout(() => {index = 0; count++;}, 1000);
+}
+setTimeout(type, 100);
+})();
+
+window.addEventListener("scroll", function(){
+document.querySelectorAll(".progress").forEach(bar=>{
+bar.style.width = bar.style.width;
+});
+});
+</script>
+
+</body>
+</html>
